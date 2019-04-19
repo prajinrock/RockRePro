@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		background-color: #333;
+	}
+	.holder > img{
+		box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+	}
+	@media only screen and (max-width: 1440px){
+		.holder{
+			width: 100%;
+		}
+		.holder > img{
+			width: 100%;
+		}
+	}
+	@media only screen and (min-width:1440px){
+		.holder{
+			width: 1440px;
+			margin: 0px auto;
+		}
+		.holder > img{
+			width: 100%;
+		}
+	}
+	.note{
+		background-color: red;
+		color: #fff;
+		font-family: 'Árial','Sans-Serif','Helvetica';
+		position: absolute;
+		top: 0px;
+		height: 50vh;
+		width: 100vw;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: .8;
+		font-size: 20px;
+	}
+</style>
+<body>
+<div class="holder">
+	<img src="design.jpg" alt="Image Loading">
+</div>
+
+<div class="note" id="notify">
+	This is just an image preview not an HTML page  <br/>
+	<button onclick="myFunction()">Continue</button>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("notify");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
