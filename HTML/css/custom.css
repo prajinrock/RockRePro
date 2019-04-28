@@ -98,3 +98,79 @@ body{
 .sticky + .content {
   padding-top: 60px;
 }
+.welcomeNote{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.welcomeNote h1{
+	color: #1a70b8;
+	font-size: 44px;
+	font-family:"Museo Sans W01 Rounded 900";
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.welcomeNote p{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	color: #303030;
+	text-align: center;
+}
+.welcomeNote p a{
+	color: #1a70b8;
+	text-decoration: none;
+	font-weight: 700;
+}
+.urgentNeeds h1{
+	color: #1a70b8;
+	font-size: 42px;
+	font-family:"Museo Sans W01 Rounded 900";
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.needBox{
+	width: 30%;
+	position: relative;
+}
+.needBox h2{
+	display: block;
+	color: #273c75;
+	font-size: 24px;
+	font-weight: 700;
+	width: 60%;
+}
+.needContent{
+	background-color: #273c75;
+	border: 2px solid #1a70b8;
+	border-radius: 10px;
+}
+.needImage{
+	width: 147px;
+	height: 104px;
+	border: 2px solid #273c75;
+	border-radius: 10px;
+	overflow: hidden;
+	position: absolute;
+	right: 15px;
+	top: -10px;
+
+}
+.needImage > img{
+	width: 100%;
+}
+.help_btn{
+	width: 96px;
+	height: 96px;
+	background-color: #1a70b8;
+	border: 5px solid #fff;
+	color: #fff;
+	border-radius: 50px;
+	position: absolute;
+	margin-top:-40px;
+	right: 15px;
+	text-transform: uppercase;
+	font-family:"Museo Sans W01 Rounded 900";
+	font-size: 18px;
+	outline: none;
+}
