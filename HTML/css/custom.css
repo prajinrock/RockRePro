@@ -1,0 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+	font-family: 'Lato', sans-serif;
+	min-height: 1200px;
+}
+@font-face {font-family: "Museo Sans W01 Rounded 900";
+  src: url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.eot"); /* IE9*/
+  src: url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.woff2") format("woff2"), /* chrome、firefox */
+  url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.woff") format("woff"), /* chrome、firefox */
+  url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.svg#Museo Sans W01 Rounded 900") format("svg"); /* iOS 4.1- font-family:"Museo Sans W01 Rounded 900"*/ 
+}
+.react_bg{
+	background-color: #1971b9;
+}
+.login_btn{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 6px 15px;
+}
+.login_btn > i{
+	padding-left: 5px;
+	font-size: 16px;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: #4b4b4b;
+	font-size: 15px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+@media (min-width: 1200px){
+	.navbar-expand-xl .navbar-nav .nav-link {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+	.navbar{
+		padding: 0rem 1rem;
+	}
+	.nav-link{
+		padding: 2rem .5rem;
+	}
+}
+.navbar-brand img{
+	height: 36px;
+}
+.bg-light{
+	background-color: #f7f7f7 !important;
+}
+.top_bar{
+	background-color: #192a38;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-moz-justify-content: space-between;
+}
+.toplink{
+	color: #fff;
+	font-size: 14px;
+	padding: 15px 20px;
+}
+.toplink i{
+	color: #1a70b8;
+	padding-right: 5px;
+}
+.flexBox{
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+}
+
+.dropdown-menu{
+	border-radius: 0px;
+	border: none;
+	box-shadow: 1px 0px 5px rgba(0,0,0,.1);
+	border-top: 2px solid #1a70b8;
+	top: 96%;
+}
+.dropdown-item{
+	padding: .5rem 1.5rem;
+	font-size: 14px;
+	font-weight: 700;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
