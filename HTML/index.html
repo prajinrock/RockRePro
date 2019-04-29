@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="//db.onlinewebfonts.com/c/470ad2519927fa4eedb66fdcd82af115?family=Museo+Sans+Rounded+700" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="top_bar flexBox">
+  <a href="#" class="toplink"><i class="fa fa-envelope" aria-hidden="true"></i> react@gbc-education.org</a>
+  <div class="social_links">Facebook</div>
+</div>
+<nav class="navbar navbar-expand-xl navbar-light bg-light" id="navbar">
+      <a class="navbar-brand" href="#"><img src="images/gbc-react.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown06">
+              <a class="dropdown-item" href="#">About REACT</a>
+              <a class="dropdown-item" href="#">Visit GBC-Education</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Urgent Needs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+          <button class="react_bg login_btn">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </nav>
+    <section class="welcomeNote">
+      <div class="container">
+        <h1>Engaging with Education Cannot Wait</h1>
+        <p>Founded in 2012, the <a href="#">Global Business Coalition for Education (GBC-Education)</a> brings together the business community to accelerate progress in delivering education for all the world’s children and youth.</p>
+        <p>The Rapid Education Action (REACT) initiative emerged out of GBC-Education’s commitment to mobilize in-kind and financial resources for <a href="#">Education Cannot Wait (ECW)</a> – a fund to support education in emergencies that was launched at the 2016 World Humanitarian Summit in Istanbul, Turkey.</p>
+        <p>The REACT Platform allows the Global Business Coalition for Education to match available resources with on-the-ground needs. Once the match occurs, implementation partners can effectively leverage these assets to carry out essential programs and initiatives to support education in emergencies. The platform can also help connect stakeholders – businesses, implementation partners, and Education Cannot Wait – to solve challenges facing education today.</p>
+      </div>
+    </section>
+    <section class="urgentNeeds">
+      <div class="container">
+        <div class="sectionThree flexBox">
+          <div class="needBox">
+            <h2>General Crisis Needs</h2>
+            <div class="needImage"><img src="images/need_image_1.jpg"></div>
+            <div class="needContent">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+            <button class="help_btn">I Can Help</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
