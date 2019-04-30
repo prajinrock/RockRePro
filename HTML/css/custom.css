@@ -13,6 +13,9 @@ body{
   url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.svg#Museo Sans W01 Rounded 900") format("svg"); /* iOS 4.1- font-family:"Museo Sans W01 Rounded 900"*/ 
 }
+button, button:hover{
+	outline: none;
+}
 .react_bg{
 	background-color: #1971b9;
 }
@@ -25,10 +28,15 @@ body{
 	text-transform: uppercase;
 	border-radius: 3px;
 	padding: 6px 15px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
 }
 .login_btn > i{
 	padding-left: 5px;
 	font-size: 16px;
+}
+.login_btn a{
+	color: #fff;
+	text-decoration: none;
 }
 .navbar-light .navbar-nav .nav-link{
 	color: #4b4b4b;
@@ -64,7 +72,7 @@ body{
 .toplink{
 	color: #fff;
 	font-size: 14px;
-	padding: 15px 20px;
+	padding: 10px 20px;
 }
 .toplink i{
 	color: #1a70b8;
@@ -93,6 +101,7 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 .sticky + .content {
@@ -121,13 +130,17 @@ body{
 	text-decoration: none;
 	font-weight: 700;
 }
+.custom_wrapper{
+	max-width: 90%;
+	margin: 0px auto;
+}
 .urgentNeeds h1{
 	color: #1a70b8;
 	font-size: 42px;
 	font-family:"Museo Sans W01 Rounded 900";
 	text-transform: uppercase;
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
 }
 .needBox{
 	width: 30%;
@@ -138,12 +151,14 @@ body{
 	color: #273c75;
 	font-size: 24px;
 	font-weight: 700;
-	width: 60%;
+	width: 50%;
 }
 .needContent{
 	background-color: #273c75;
 	border: 2px solid #1a70b8;
 	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
 }
 .needImage{
 	width: 147px;
@@ -167,10 +182,674 @@ body{
 	color: #fff;
 	border-radius: 50px;
 	position: absolute;
-	margin-top:-40px;
+	margin-top:-50px;
 	right: 15px;
 	text-transform: uppercase;
 	font-family:"Museo Sans W01 Rounded 900";
 	font-size: 18px;
 	outline: none;
+	transition: all .3s;
+}
+.help_btn:hover{
+	border-color: #273c75;
+	outline: none;
+	box-shadow: 0px 2px 3px rgba(0,0,0,.5) inset;
+}
+.needContent h3{
+	padding-top: 30px;
+	font-family:"Museo Sans W01 Rounded 900";
+	color: #fff;
+	font-size: 21px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.needContent h4{
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+.needContent h4 i{
+	color: #e84118;
+	font-size: 18px;
+	padding-right: 10px;
+}
+.needContent p{
+	color: #fff;
+	font-size: 16px;
+	padding-top: 20px;
+	text-align: justify;
+}
+.need_category{
+	font-size: 15px;
+	color: #fff;
+}
+.need_category > span{
+	font-weight: 700;
+	padding-top: 20px;
+}
+.sectionThree{
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-moz-justify-content: space-between;
+}
+.needList_more{
+	width: 100%;
+	text-align: right;
+	margin-top: 60px;
+}
+.needList_more a{
+	font-family:"Museo Sans W01 Rounded 900";
+	color: #1a70b8;
+	font-size: 17px;
+}
+.needList_more a i{
+	font-size: 15px;
+	padding-left: 10px;
+}
+.userType_title{
+	font-family:"Museo Sans W01 Rounded 900";
+	font-size: 42px;
+	color: #1a70b8;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+.userContent{
+	background-color: #efefef;
+	border-radius: 10px;
+	padding: 30px 0px;
+}
+.userContBox{
+	padding: 0px 30px;
+	width: 33%;
+	border-right: 1px solid #bbbfcb;
+	flex-direction: column;
+	height: 100%;
+}
+.userContBox:nth-last-child(1){
+	border-right: 0px;
+}
+.userContBox h1{
+	font-size: 24px;
+	color: #222;
+	text-transform: none;
+	font-family:"Museo Sans W01 Rounded 900";
+	text-align: center;
+	padding-bottom: 10px;
+	min-height: 70px;
+}
+.userContBox p{
+	padding-top: 10px;
+	padding-bottom: 20px;
+	font-size: 16px;
+	color: #222;
+	min-height: 130px;
+}
+.userContBox p a{
+	color: #1971b9;
+	font-weight: 700;
+}
+.userContBox p a:hover{
+	text-decoration: none;
+}
+.userContImage{
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.userContImage > img {
+	width: 100%;
+}
+.userContBox button{
+	margin-top: auto;
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 6px 15px;
+	background-color: #1971b9;
+	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+.userContBox button > i{
+	padding-left: 5px;
+	font-size: 16px;
+}
+.userBtnBox{
+	text-align: right;
+}
+.mainTitle{
+	font-family:"Museo Sans W01 Rounded 900";
+	font-size: 42px;
+	color: #1a70b8;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	margin-bottom: 0px;
+	}
+.mapBox{
+	width: 90%;
+	margin:0px auto;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.mapBox iframe{
+	width: 100%;
+}
+.howSection{
+	background-color: #f8f8f8;
+}
+.loginSection{
+	background-color: #ededed;
+}
+.loginBox{
+	width: 100%;
+}
+.login_content{
+	width: 65%;
+}
+.login_form{
+	width: 35%;
+	background-color: #1a70b8;
+	box-sizing: border-box;
+	padding: 50px 40px;
+}
+/*SLICK SLIDER*/
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/*SLICK SLIDERR ENDS*/
+.partnerWrapper{
+	max-width: 90%;
+	margin:0px auto;
+}
+.clientQuote{
+	border:5px solid #b5bcd0;
+	background-color: #f5f6fa;
+	border-radius: 10px;
+	padding: 20px 20px;
+}
+.quoteText{
+	font-size: 18px;
+	font-style: italic;
+	color: #747474;
+	min-height: 120px;
+}
+.quoteText::before{
+	content: "“";
+	font-size:26px;
+	font-style: normal;
+	color: #273c75;
+	font-family:"Museo Sans W01 Rounded 900";
+}
+.quoteText::after{
+	content: "”";
+	font-size:26px;
+	font-style: normal;
+	color: #273c75;
+	font-family:"Museo Sans W01 Rounded 900";
+}
+.QuoteName{
+	text-align: right;
+	color: #273c75;
+	font-style: italic;
+	font-weight: 700;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+.QuoteName span{
+	color: #939393;
+}
+.client-logos{
+	padding-top: 60px;
+}
+.darkFooter{
+	background-color: #192a38;
+}
+.darkFooter h2{
+	font-size: 24px;
+	color: #fff;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+.darkFooter ul{
+	column-count: 3;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	color: #fff;
+}
+.darkFooter ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.darkFooter ul li a:hover{
+	outline: none;
+}
+.footerSection{
+	margin-top: 60px;
+}
+.darkFooter{
+	padding: 40px 0px;
+}
+.footerLeft {
+	width: 50%;
+}
+.footerRight{
+	width: 40%;
+}
+.darkFooter .container{
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+}
+.brandImage{
+	max-width: 230px;
+}
+.brandImage > img{
+	width: 100%;
+}
+.brandMail a{
+	color: #fff;
+	font-weight: 700;
+	padding-left: 30px;
+}
+.lightFooter{
+	background-color: #efefef;
+}
+.lightFooter .container{
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-moz-justify-content: space-between;
+}
+.copyrightTxt{
+	color: #7f8c8d;
+	font-size: 13px;
+	padding: 20px 0px;
+}
+.devLogo{
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+}
+.devLogo span{
+	font-size: 13px;
+}
+.devLogo img{
+	max-height: 25px;
+	padding-left: 20px;
+}
+.loginContent{
+	padding: 50px 0px;
+}
+.loginContent h1{
+	font-family:"Museo Sans W01 Rounded 900";
+	font-size: 36px;
+	color: #222;
+	padding-bottom: 20px;
+}
+.loginContent h2{
+	font-size: 24px;
+	color: #1a70b8;
+	font-weight: 900;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.loginContent p{
+	font-size: 16px;
+	color: #222;
+}
+.login-content .slick-dots{
+	text-align: left;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+.login-content .slick-slide{
+	margin-left: 0px;
+}
+.login-content .slick-dots li button:before{
+	font-size: 16px;
+	color: #1a70b8;
+}
+
+/*TEXT FIELD ONLY*/
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  /*text-transform: uppercase;*/
+  letter-spacing: 0.05em;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+.login_form input[type="text"], .login_form input[type="email"]{
+	background-color: transparent !important;
+	color: #fff !important;
+	border-color: rgba(255,255,255,.1);
+	border-width: 2px;
+}
+.login_form input[type="text"]:focus, .login_form input[type="email"]:focus{
+	color: #fff;
+}
+.login_form input:placeholder-shown + label{
+	font-size: 10px;
+	color: #fff;
+	text-transform: none;
+}
+.login_form input:not(:placeholder-shown) + label, .login_form input:focus + label{
+	color: #fff;
+}
+/*TEXT FIELD ONLY*/
+.login_form h3{
+	font-size: 36px;
+	font-family:"Museo Sans W01 Rounded 900";
+	color: #fff;
+	text-align: center;
+
+}
+.login_form button{
+	width: 100%;
+	background-color: #fff;
+	border:none;
+	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+	border-radius: 6px;
+	font-weight: 700;
+	padding: 10px 0px;
+	margin-top: 30px;
+	text-transform: uppercase;
+}
+.loginFooter{
+	justify-content: space-between;
+	padding-top: 20px;
+}
+.loginFooter > span:nth-child(1){
+	color: #6ab3f0;
+	font-size: 14px;
+}
+.loginFooter > span:nth-child(2){
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+
+}
+.login_form{
+	align-items: center;
+}
+.howClass{
+	margin:0px auto;
+	text-align: center;
+}
+.howClass > img{
+	max-width: 100%;
+}
+.social_links span{
+	font-size: 22px;
+	color: #fff;
+	padding:5px 10px;
+}
+.social_links span:nth-child(1){
+	background-color: rgba(255,255,255,.1);
+}
+.social_links span:nth-child(2){
+	background-color: rgba(0,0,0,.2);
+}
+.social_links span:nth-child(3){
+	background-color: rgba(0,0,0,.4);
+}
+.carousel-caption h1{
+	font-family:"Museo Sans W01 Rounded 900";
+	font-size: 50px;
+	color: #fff;
+}
+.carousel-caption{
+	bottom: 10rem;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+	background-color: #1a70b8;
+}
+@media only screen and (max-width: 600px) {
+  .sectionThree{
+  	flex-direction: column;
+  }
+  .needBox{
+  	width: 100%;
+  	margin-bottom: 70px;
+  }
+  .needList_more{
+  	margin-top: 0px;
+  }
+  .userContent{
+  	flex-direction: column;
+  }
+  .userContBox{
+  	width: 100%;
+  	border-right: 0px;
+  	border-bottom: 1px solid #bbbfcb;
+  	margin-bottom: 20px;
+  	padding-bottom: 30px;
+  }
+  .userContBox:nth-last-child(1){
+		border-bottom: 0px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	.userContBox p{
+		min-height: 0px;
+	}
+	.loginBox{
+		flex-direction: column;
+	}
+	.login_content{
+		width: 100%;
+	}
+	.login_form{
+		width: 100%;
+	}
+	.login-content{
+		width: 100%;
+	}
+	.darkFooter .container, .brandFooter, .lightFooter .container{
+		flex-direction: column;
+	}
+	.footerLeft, .footerRight {
+		width: 100%;
+	}
+	.brandMail a{
+		padding: 20px 0px;
+		display: inline-block;
+	}
+	.footerRight{
+		padding-top: 30px;
+	}
+	.devLogo{
+		padding-bottom: 20px;
+	}
+
 }
