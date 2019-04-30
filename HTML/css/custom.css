@@ -851,5 +851,13 @@ input:focus + label {
 	.devLogo{
 		padding-bottom: 20px;
 	}
-
+	.navbar-brand{
+		margin-right: auto;
+	}
+	/*.sticky {
+	  top: 29px;
+	}*/
+	section{
+		box-sizing: border-box;
+	}
 }
