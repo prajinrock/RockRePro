@@ -3,7 +3,8 @@ html {
 }
 body{
 	font-family: 'Lato', sans-serif;
-	min-height: 1200px;
+	/*min-height: 1200px;*/
+	max-width: 100% !important;
 }
 @font-face {font-family: "Museo Sans W01 Rounded 900";
   src: url("MuseoRounded/c0df826ccaab9c4bfd6710508af4abf1.eot"); /* IE9*/
@@ -105,7 +106,7 @@ button, button:hover{
 }
 
 .sticky + .content {
-  padding-top: 60px;
+  /*padding-top: 60px;*/
 }
 .welcomeNote{
 	padding-top: 70px;
@@ -859,5 +860,6 @@ input:focus + label {
 	}*/
 	section{
 		box-sizing: border-box;
+		max-width: 100%;
 	}
 }
