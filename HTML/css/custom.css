@@ -30,6 +30,7 @@ button, button:hover{
 	border-radius: 3px;
 	padding: 6px 15px;
 	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+	margin: 14px 20px;
 }
 .login_btn > i{
 	padding-left: 5px;
@@ -795,6 +796,72 @@ input:focus + label {
 .dropdown-item:focus, .dropdown-item:hover{
 	background-color: #1a70b8;
 }
+.navgbc{
+	background-color: #f7f7f7;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+}
+.brandLogo > img{
+	height: 36px;
+	margin: 15px;
+}
+.navLead{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.navList{
+	margin-left: auto;
+	transition: all .3s;
+}
+.navLead > li > a{
+	padding: 20px 20px;
+	display: inline-block;
+	position: relative;
+	font-size: 15px;
+	font-weight: 700;
+	color: #444;
+}
+.navLead > li > a:hover{
+	text-decoration: none;
+}
+.navLead > li{
+	position: relative;
+}
+.drop_nav{
+	display: none;
+	top: 40px;
+	position: absolute;
+	z-index: 2;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	margin-top: 24px;
+	border-top: 2px solid #1971b9;
+}
+.drop_nav li a{
+	white-space: nowrap;
+	padding: 10px 15px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #444;
+	display: block;
+	transition: all .3s;
+}
+.drop_nav li a:hover{
+	text-decoration: none;
+	background-color: #1971b9;
+	color: #fff;
+}
+.navLead > li > a:focus{
+	color: #1971b9;
+}
+.mobMenu{
+	display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .sectionThree{
   	flex-direction: column;
@@ -861,5 +928,58 @@ input:focus + label {
 	section{
 		box-sizing: border-box;
 		max-width: 100%;
+	}
+	.navList{
+		position: absolute;
+		width: 100%;
+		top: 108px;
+		z-index: 99;
+		background-color: #fff;
+		display: none;
+	}
+	.sticky .navList{
+		top: 67px;
+	}
+	.navLead{
+		flex-direction: column;
+	}
+	.navLead > li > a{
+		padding: 15px 20px;
+		display: block;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	.drop_nav{
+		position: relative;
+		margin-top: 0px;
+		top: 0;
+		background-color: #1971b9;
+	}
+	.drop_nav li a{
+		color: #fff;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		padding: 15px 20px;
+	}
+	.mobMenu{
+		display: block;
+		/*border:1px solid #333;*/
+		width: 32px;
+		height: 22px;
+		position: relative;
+		margin-left: auto;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+	.mobMenu span{
+		width: 100%;
+		height: 2px;
+		background-color: #1971b9;
+		display: block;
+		position: absolute;
+	}
+	.mobMenu span:nth-child(1){
+		margin-top: 10px;
+	}
+	.mobMenu span:nth-child(2){
+		margin-top: 20px;
 	}
 }

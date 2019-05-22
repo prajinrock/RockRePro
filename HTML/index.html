@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="icon/png" href="https://gbc-education.org/wp-content/uploads/2018/10/Screen-Shot-2018-10-04-at-12.55.05-PM-e1552336566884.png">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
@@ -27,7 +27,7 @@
     <span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
   </div>
 </div>
-<nav class="navbar navbar-expand-xl navbar-light bg-light" id="navbar">
+<!-- <nav class="navbar navbar-expand-xl navbar-light bg-light" >
       <a class="navbar-brand" href="#"><img src="images/gbc-react.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+            <a class="nav-link dropdown-toggle" >About Us</a>
             <div class="dropdown-menu" aria-labelledby="dropdown06">
               <a class="dropdown-item" href="#">About REACT</a>
               <a class="dropdown-item" href="#">Visit GBC-Education</a>
@@ -59,11 +59,37 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
-          <button class="react_bg login_btn"><a href="#loginNav">Login <i class="fa fa-sign-in" aria-hidden="true"></i></i></button>
+          <button class="react_bg login_btn"><a href="#loginNav">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></button>
         </form>
       </div>
-    </nav>
-
+    </nav> -->
+    <div class="navgbc flexBox" id="navbar">
+      <div class="brandLogo">
+        <img src="images/gbc-react.png">
+      </div>
+      <div class="navList">
+        <ul class="navLead flexBox">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="drop_nav">
+              <li><a href="">About REACT</a></li>
+              <li><a href="">Visit GBC-Education</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Urgent Needs</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li class="button">
+            <button class="react_bg login_btn">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        </ul>
+      </div>
+      <div class="mobMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <section class="carousel">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -391,6 +417,16 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+$(document).ready(function(){
+  $(".navLead > li").click(function(){
+    //alert($(this).)
+    $(this).find( "ul" ).toggle();
+    //$(this.".drop_nav").hide();
+  });
+  $(".mobMenu").click(function(){
+    $(".navList").toggle();
+  });
+});
 </script>
 <script src="css/aos/aos.js"></script>
 <script>
@@ -474,5 +510,6 @@ function myFunction() {
     /* The viewport is greater than 700 pixels wide */
   }
 </script>
+
 </body>
 </html>
